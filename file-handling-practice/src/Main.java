@@ -18,7 +18,6 @@ public class Main {
         } catch(IOException ioException) {
             System.out.println("IO Exception occurred.");
             System.err.println(ioException.getMessage());
-
         }
 
         System.out.println("Enter something to write to file: ");
@@ -28,7 +27,7 @@ public class Main {
         try(FileOutputStream outputStream = new FileOutputStream(myFile)) {
             byte[] content = data.getBytes();
             outputStream.write(content);
-            System.out.println("Data written successfully!!");
+            System.out.println("Data written successfully!!")
         } catch(FileNotFoundException e) {
             System.out.println("File not found.");
         } catch(IOException ioException) {
